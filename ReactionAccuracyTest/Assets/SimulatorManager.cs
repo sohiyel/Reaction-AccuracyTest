@@ -128,7 +128,7 @@ public class SimulatorManager : MonoBehaviour
             }
         }
         catch {
-            componentName = "DontCount";
+            componentName = "OutofRange";
         }
 
 
@@ -167,12 +167,10 @@ public class SimulatorManager : MonoBehaviour
     {
         if (move)
         {
-            //MoveTarget();
             GetComponent<AudioSource>().Stop();
             move = false;
             target.SetActive(false);
             endPanel.SetActive(true);
-            SaveToFile();
         }
     }
 
